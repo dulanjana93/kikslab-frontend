@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import moment from "moment";
+import { Link } from "react-router-dom"; // ✅ Added import
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <Fragment>
       <footer
@@ -24,24 +25,24 @@ const Footer = (props) => {
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="mt-2 space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link to="/shop" className="text-gray-400 hover:text-white">
                   Shop
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link to="/about" className="text-gray-400 hover:text-white">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link to="/contact" className="text-gray-400 hover:text-white">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link to="/faq" className="text-gray-400 hover:text-white">
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -75,8 +76,6 @@ const Footer = (props) => {
             <p>
               &copy; {moment().format("YYYY")} KICKS LAB. All rights reserved.
             </p>
-
-            {/* Social Media Icons */}
           </div>
         </div>
       </footer>
